@@ -15,6 +15,7 @@ import PrivateRoute from './components/privateRoute/PrivateRoute'
 import AddService from './components/AddService/AddService';
 import MyOrders from './components/MyOrders/MyOrders';
 import AllOrders from './components/AllOrders/AllOrders';
+import NotFound from './components/NotFound/NotFound';
 
 
 
@@ -23,41 +24,63 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
+
           <Switch>
             <Route exact path="/">
+              <Header></Header>
               <Home></Home>
+              <Footer></Footer>
             </Route>
             <Route path="/home">
+              <Header></Header>
               <Home></Home>
+              <Footer></Footer>
             </Route>
             <PrivateRoute path="/booking/:bookingId">
+              <Header></Header>
               <Booking></Booking>
+              <Footer></Footer>
             </PrivateRoute>
             <Route path="/user">
+              <Header></Header>
               <User></User>
+              <Footer></Footer>
             </Route>
             <Route path="/addUser">
+              <Header></Header>
               <AddUser></AddUser>
+              <Footer></Footer>
             </Route>
             <Route path="/update">
-              <UpdateUser>
-              </UpdateUser>
+              <Header></Header>
+              <UpdateUser> </UpdateUser>
+              <Footer></Footer>
             </Route>
             <Route path="/addService">
+              <Header></Header>
               <AddService></AddService>
+              <Footer></Footer>
             </Route>
             <Route path="/myOrders">
+              <Header></Header>
               <MyOrders></MyOrders>
+              <Footer></Footer>
             </Route>
             <Route path="/AllOrders">
+              <Header></Header>
               <AllOrders></AllOrders>
+              <Footer></Footer>
             </Route>
             <Route path="/signin">
+              <Header></Header>
               <Signin></Signin>
+              <Footer></Footer>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
-          <Footer></Footer>
+
         </Router>
       </AuthProvider>
     </div>

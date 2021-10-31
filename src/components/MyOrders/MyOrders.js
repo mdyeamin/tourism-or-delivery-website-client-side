@@ -36,7 +36,7 @@ const MyOrders = () => {
                     {
                         myorder.map(order => <div key={order._id} className="col-md-4 g-2 mt-4">
                             <img src={order.img} alt="" />
-                            <h4>{order.productName}</h4>
+                            <h4>{order.title}</h4>
                             <button className="btn btn-danger" onClick={() => handleDelete(order._id)} >Delete</button>
                         </div>)
 

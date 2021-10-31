@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './AllOrders.css'
+
+
 const AllOrders = () => {
     const [allorder, setAllorder] = useState([])
+    const [modifyCount, setModifyCount] = useState(0)
 
 
     const handleDelete = (id) => {
@@ -11,10 +14,38 @@ const AllOrders = () => {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })
-                .then()
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = allorder.filter(order => order._id !== id);
+                    setAllorder(remaining);
+                })
         }
 
     }
+
+
+
+    const handleUpdatestatus = (id) => {
+        const update = { status: 'approved' }
+        const url = `https://pacific-shore-80224.herokuapp.com/update/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(update)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Update Successful');
+                    setModifyCount(modifyCount + 1);
+
+                }
+            })
+
+    }
+
 
 
     useEffect(() => {
@@ -32,7 +63,7 @@ const AllOrders = () => {
                             <h4>{order.productName}</h4>
                             <h6>Status:{order.status}</h6>
                             <button className="btn btn-danger me-4" onClick={() => handleDelete(order._id)} >Delete</button>
-                            <button className="btn update-btn text-white" onClick={() => handleDelete(order._id)} >Status update</button>
+                            <button className="btn update-btn text-white" onClick={() => handleUpdatestatus(order._id)}>Status update</button>
                         </div>)
 
                     }
