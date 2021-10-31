@@ -1,0 +1,33 @@
+
+.footer-area{
+    background: #282828;
+    padding: 50px 0;
+    margin-top: 100px;
+    /* text-align: center; */
+}
+.footer {
+    width: 85%;
+    margin: auto;
+}
+.footer-head{
+    color: #fff;
+}
+.span-color{
+    color: #E4A522;
+}
+.ico i{
+    font-size: 24px;
+    margin: 5px;
+    color: #1097F5;
+}
+
+.f-head{
+    margin-bottom: 30px;
+}
+hr{
+    color:rgb(82, 82, 82)
+}
+
+.default-color{
+color: #909090;
+}

@@ -1,0 +1,14 @@
+.add-user-area{
+    padding: 30px;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.add-user-area input, .add-user-area textarea{
+    width: 75%;
+
+} 

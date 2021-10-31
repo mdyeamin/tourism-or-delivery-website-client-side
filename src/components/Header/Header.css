@@ -1,0 +1,51 @@
+
+
+.nav{
+    width: 100%;
+    position: absolute;
+    position: sticky;
+    top: 0;
+    background: #001645;
+}
+.navBorder a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    /* border: 2px solid #06C2C9; */
+    padding: 2px 12px;
+    border-radius: 40px;
+    transition: .2s;
+}
+.navBorder :hover {
+    background: #5D6BE7;
+    color:#fff;
+}
+.navBorder:nth-last-child(2){
+    margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.login-btn, .update-btn{
+    /* background:#06C2C9; */
+    background: #5D6BE7;
+}
+
+.user-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.user-logo img{
+width: 40px;
+border-radius: 50%;
+}

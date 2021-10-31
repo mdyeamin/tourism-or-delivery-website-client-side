@@ -1,0 +1,8 @@
+.country{
+    display: flex;
+    align-items: center
+
+}
+.country a{
+    margin-left: 15px;
+}
