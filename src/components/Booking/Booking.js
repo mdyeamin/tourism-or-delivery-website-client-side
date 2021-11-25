@@ -10,7 +10,7 @@ const Booking = () => {
     const { bookingId } = useParams()
     const [books, setBooks] = useState()
     useEffect(() => {
-        fetch('https://pacific-shore-80224.herokuapp.com/services')
+        fetch('https://fierce-beach-92464.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [])
@@ -21,10 +21,10 @@ const Booking = () => {
     const onSubmit = data => {
         data.status = 'pending';
         data.poductId = bookingId;
-        data.productName = book?.name;
+        data.productName = book?.title;
         data.img = book?.img
         console.log(JSON.stringify(data))
-        fetch("https://pacific-shore-80224.herokuapp.com/orders", {
+        fetch("https://fierce-beach-92464.herokuapp.com/orders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

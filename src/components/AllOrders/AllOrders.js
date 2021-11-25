@@ -10,7 +10,7 @@ const AllOrders = () => {
     const handleDelete = (id) => {
         const confirmation = window.confirm('Are you Sure? want to delete this item?')
         if (confirmation) {
-            fetch(`https://pacific-shore-80224.herokuapp.com/allorders/${id}`, {
+            fetch(`https://fierce-beach-92464.herokuapp.com/allorders/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })
@@ -27,7 +27,7 @@ const AllOrders = () => {
 
     const handleUpdatestatus = (id) => {
         const update = { status: 'approved' }
-        const url = `https://pacific-shore-80224.herokuapp.com/update/${id}`;
+        const url = `https://fierce-beach-92464.herokuapp.com/update/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -43,13 +43,12 @@ const AllOrders = () => {
 
                 }
             })
-
     }
 
 
 
     useEffect(() => {
-        fetch('https://pacific-shore-80224.herokuapp.com/allorder')
+        fetch('https://fierce-beach-92464.herokuapp.com/allorder')
             .then(res => res.json())
             .then(data => setAllorder(data))
     })

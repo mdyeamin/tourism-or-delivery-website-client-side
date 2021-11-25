@@ -5,7 +5,7 @@ const AddUser = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('https://pacific-shore-80224.herokuapp.com/addUser', {
+        fetch('https://fierce-beach-92464.herokuapp.com/addUser', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

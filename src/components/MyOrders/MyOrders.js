@@ -10,7 +10,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const confirmation = window.confirm('Are you Sure? want to delete this item?')
         if (confirmation) {
-            fetch(`https://pacific-shore-80224.herokuapp.com/orders/${id}`, {
+            fetch(`https://fierce-beach-92464.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })
@@ -21,7 +21,7 @@ const MyOrders = () => {
 
 
     useEffect(() => {
-        fetch(`https://pacific-shore-80224.herokuapp.com/myorder?email=${email}`)
+        fetch(`https://fierce-beach-92464.herokuapp.com/myorder?email=${email}`)
             .then(res => res.json())
             .then(data => setMyorder(data))
     })
@@ -36,7 +36,7 @@ const MyOrders = () => {
                     {
                         myorder.map(order => <div key={order._id} className="col-md-4 g-2 mt-4">
                             <img src={order.img} alt="" />
-                            <h4>{order.title}</h4>
+                            <h4 className="my-3 p-3">{order?.productName}</h4>
                             <button className="btn btn-danger" onClick={() => handleDelete(order._id)} >Delete</button>
                         </div>)
 

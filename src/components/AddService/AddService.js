@@ -6,7 +6,7 @@ const AddService = () => {
     const onSubmit = data => {
         console.log('kulu', data);
         console.log(JSON.stringify(data))
-        fetch("https://pacific-shore-80224.herokuapp.com/services", {
+        fetch("https://fierce-beach-92464.herokuapp.com/services", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

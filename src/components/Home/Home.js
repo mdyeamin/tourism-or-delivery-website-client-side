@@ -7,7 +7,7 @@ const Home = () => {
     const [travelInfo, setTravelInfo] = useState([])
 
     useEffect(() => {
-        fetch("https://pacific-shore-80224.herokuapp.com/services")
+        fetch("https://fierce-beach-92464.herokuapp.com/services")
             .then(res => res.json())
             .then(data => setTravelInfo(data))
     }, [])
