@@ -15,7 +15,7 @@ const Home = () => {
     return (
         < >
             <div>
-                <h2 className="h text-white">Authentic private tours led by handpicked guides</h2>
+                <div><h2 className="h text-white">Authentic tours led by handpicked guides</h2></div>
                 <video id="videoBG" poster="" autoPlay muted loop>
                     <source src={bannerVideo} />
                 </video>
